@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<module xmlns="urn:jboss:module:1.0" name="com.mssql">
+  <resources>
+    <resource-root path="jtds.jar"/> <!--tested on rupesh win-8 desktop current configuration works.-->
+	<!-- <resource-root path="sqljdbc4.jar"/> does not work-->
+  </resources>
+ <dependencies>
+    <module name="javax.api"/>
+  </dependencies>
+</module>

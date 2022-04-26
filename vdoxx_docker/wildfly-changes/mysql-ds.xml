@@ -1,0 +1,23 @@
+<!--  Datasource config for MySQL using 3.0.9 available from:
+http://www.mysql.com/downloads/api-jdbc-stable.html
+-->
+
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+   
+<!-- The datasource is bound into JNDI at this location. We reference 
+      this in META-INF/persistence.xml -->
+   <datasource jndi-name="java:/VdoxxDS"
+      pool-name="VdoxxDS" enabled="true"
+      use-java-context="true" use-ccm="true">      
+	  <!--<connection-url>jdbc:mysql://localhost:3306/vdoxxdb</connection-url>-->
+	  <connection-url>jdbc:mysql://45.79.126.99:3306/vdoxxdb?autoReconnect=true&amp;useUnicode=true&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=utf8&amp;characterEncoding=utf8</connection-url>
+      <driver>mysql_8</driver>
+      <security>
+           <user-name>vdoxx</user-name>    
+		   <password>vdoxx999</password>
+      </security>
+   </datasource>
+</datasources>
+ 
